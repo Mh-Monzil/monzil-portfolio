@@ -8,7 +8,6 @@ import { Typewriter } from "react-simple-typewriter";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import PageTransition from "@/components/PageTransition";
-import Head from "next/head";
 AOS.init();
 import { easeInOut, motion } from "framer-motion";
 import Stats from "@/components/Stats";
@@ -54,7 +53,7 @@ export default function Home() {
               data-aos-duration="1200"
               data-aos-easing="ease-in-out"
             >
-              Hello I'm <br />
+              Hello I&#39m <br />
               <span className="text-primary">Mohiuddin Monzil</span>
             </h1>
             <p className="font-medium text-lg max-w-[600px]">

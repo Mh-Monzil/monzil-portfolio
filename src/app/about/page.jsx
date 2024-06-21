@@ -1,6 +1,6 @@
 "use client";
 import PageTransition from "@/components/PageTransition";
-import Head from "next/head";
+
 import React from "react";
 
 

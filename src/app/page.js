@@ -15,7 +15,7 @@ import Stats from "@/components/Stats";
 export default function Home() {
   return (
     <>
-      <PageTransition />
+      {/* <PageTransition /> */}
       <main className="flex min-h-[80vh] flex-col items-center justify-center font-bold ">
         <div className=" flex flex-col items-center justify-center md:flex-row gap-8 lg:gap-20 w-full h-full pt-6 xl:pt-8 xl:pb-24">
           <motion.div

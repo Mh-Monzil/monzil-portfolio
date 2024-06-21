@@ -1,7 +1,6 @@
 "use client";
-import PageTransition from "@/components/PageTransition";
-
 import React from "react";
+import PageTransition from "@/components/PageTransition";
 
 
 

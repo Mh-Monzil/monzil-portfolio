@@ -1,4 +1,5 @@
-"use client";
+"use client"
+import React from 'react';
 import Image from "next/image";
 import profilePic3 from "../../public/mz-pro.png";
 import Link from "next/link";
@@ -7,30 +8,15 @@ import { RiContractLine } from "react-icons/ri";
 import { Typewriter } from "react-simple-typewriter";
 import AOS from "aos";
 import "aos/dist/aos.css";
-// import PageTransition from "@/components/PageTransition";
-
+import PageTransition from "@/components/PageTransition";
+AOS.init();
 import { easeInOut, motion } from "framer-motion";
 import Stats from "@/components/Stats";
-import dynamic from "next/dynamic";
-import { useEffect } from "react";
 
-const DynamicWithNoSSR = dynamic(
-  () => import ('../components/PageTransition'),
-  {ssr: false}
-)
-
-
-export default function Home() {
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      AOS.init();
-    }
-  }, []);
-
-  return (
-    <>
-      <DynamicWithNoSSR />
+const Home = () => {
+    return (
+        <>
+      {/* <PageTransition /> */}
       <main className="flex min-h-[80vh] flex-col items-center justify-center font-bold ">
         <div className=" flex flex-col items-center justify-center md:flex-row gap-8 lg:gap-20 w-full h-full pt-6 xl:pt-8 xl:pb-24">
           <motion.div
@@ -106,5 +92,7 @@ export default function Home() {
         <Stats />
       </main>
     </>
-  );
-}
+    );
+};
+
+export default Home;

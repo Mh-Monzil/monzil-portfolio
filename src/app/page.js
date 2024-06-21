@@ -53,7 +53,7 @@ export default function Home() {
               data-aos-duration="1200"
               data-aos-easing="ease-in-out"
             >
-              Hello I&#39m <br />
+              Hello I&#39;m <br />
               <span className="text-primary">Mohiuddin Monzil</span>
             </h1>
             <p className="font-medium text-lg max-w-[600px]">

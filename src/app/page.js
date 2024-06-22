@@ -12,16 +12,13 @@ import "aos/dist/aos.css";
 import { easeInOut, motion } from "framer-motion";
 import Stats from "@/components/Stats";
 import dynamic from "next/dynamic";
-import { useEffect } from "react";
+import { React, useEffect } from "react";
 
-const DynamicWithNoSSR = dynamic(
-  () => import ('../components/PageTransition'),
-  {ssr: false}
-)
-
+const DynamicWithNoSSR = dynamic(() => import("../components/PageTransition"), {
+  ssr: false,
+});
 
 export default function Home() {
-
   useEffect(() => {
     if (typeof window !== "undefined") {
       AOS.init();
@@ -32,7 +29,7 @@ export default function Home() {
     <>
       <DynamicWithNoSSR />
       <main className="flex min-h-[80vh] flex-col items-center justify-center font-bold ">
-        <div className=" flex flex-col items-center justify-center md:flex-row gap-8 lg:gap-20 w-full h-full pt-6 xl:pt-8 xl:pb-24">
+        <div className=" flex flex-col items-center justify-center md:flex-row gap-8 lg:gap-20 w-full lg:h-[60vh] lg:pt-6 xl:pt-8 xl:pb-24">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{
@@ -51,7 +48,11 @@ export default function Home() {
             <p className="text-xl lg:text-2xl h-12">
               Junior
               <Typewriter
-                words={[" Frontend Developer", " Web Developer"]}
+                words={[
+                  " Frontend Developer",
+                  " MERN Stack Developer",
+                  " Web Developer",
+                ]}
                 loop={true}
                 cursor
                 cursorStyle="__"
@@ -77,11 +78,11 @@ export default function Home() {
               learning.
             </p>
             <div className="pt-4 flex justify-center md:justify-start gap-4">
+              <span data-aos="fade-down"
+                  data-aos-offset="200"
+                  data-aos-duration="1500"
+                  data-aos-easing="ease-in-out">
               <Link
-                data-aos="fade-right"
-                data-aos-offset="200"
-                data-aos-duration="1500"
-                data-aos-easing="ease-in-out"
                 href="/resume.pdf"
                 target="_blank"
                 download={true}
@@ -89,17 +90,20 @@ export default function Home() {
               >
                 Resume <FiExternalLink className="text-3xl" />
               </Link>
-              <Link
-                data-aos="fade-left"
-                data-aos-offset="200"
-                data-aos-duration="1500"
-                data-aos-easing="ease-in-out"
-                href="/contact"
-                className="bg-primary border-2 border-primary text-dark text-lg font-semibold lg:font-bold p-2.5 lg::px-6 flex items-center gap-3 w-fit rounded-md hover:bg-transparent hover:text-white transition-all ease-in-out duration-300 "
-              >
-                Hire Me
-                <RiContractLine className="text-3xl" />
-              </Link>
+              </span>
+              <span data-aos="fade-down"
+                  data-aos-offset="200"
+                  data-aos-duration="1500"
+                  data-aos-easing="ease-in-out">
+                <Link
+                  
+                  href="/contact"
+                  className="bg-primary border-2 border-primary text-dark text-lg font-semibold lg:font-bold p-2.5 lg:px-6 flex items-center gap-3 w-fit rounded-md hover:bg-transparent hover:text-white transition-all ease-in-out duration-300 "
+                >
+                  Hire Me
+                  <RiContractLine className="text-3xl" />
+                </Link>
+              </span>
             </div>
           </div>
         </div>

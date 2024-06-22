@@ -30,6 +30,10 @@ const Navbar = () => {
       path: "/",
     },
     {
+      name: "Services",
+      path: "/services",
+    },
+    {
       name: "About",
       path: "/about",
     },
@@ -59,7 +63,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="w-full py-4 lg:py-6 px-2 lg:px-0 font-semibold flex items-center justify-between">
+    <header className="w-full mx-auto sticky top-0 bg-dark px-6 py-4 lg:py-6 xl:px-0 font-semibold flex items-center justify-between">
       {/* logo  */}
       <Logo />
 
@@ -87,23 +91,21 @@ const Navbar = () => {
       {/* social links  */}
       <nav className="hidden lg:flex items-center gap-4 text-3xl">
         {socialLinks.map((social) => (
-          <motion.a
+          <Link
             href={`${social.path}`}
             key={social.path}
             target="_blank"
-            whileHover={{ y: [0, -5, 0] }}
-            whileTap={{ scale: 0.9 }}
-            transition={{ duration: 0.5 }}
-            className="border-b-2 border-primary pb-1 rounded-lg "
+
+            className="border-b-2 border-primary pb-1 rounded-lg hover:mb-2 transition-all duration-300"
           >
             {social.icon}
-          </motion.a>
+          </Link>
         ))}
       </nav>
       {/* desktop nav ends */}
 
       {/* sidebar  */}
-      <div className="flex lg:hidden">
+      <div className="flex lg:hidden ">
         <Sheet>
           <SheetTrigger asChild>
             <TfiMenuAlt className="text-3xl cursor-pointer" />

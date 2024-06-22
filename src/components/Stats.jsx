@@ -16,7 +16,7 @@ const stats = [
     text: "Technologies Mastered",
   },
   {
-    num: 335,
+    num: 350,
     text: "Code Commits",
   },
 ];
@@ -24,7 +24,7 @@ const stats = [
 const Stats = () => {
   return (
     <div>
-      <div className="flex flex-wrap gap-6 max-w-[80vw] mx-auto xl:max-w-none mt-10 xl:mt-0">
+      <div className="flex flex-wrap gap-6 max-w-full md:max-w-[80vw] mx-auto xl:max-w-none mt-10">
         {stats.map((item, idx) => {
           return <div key={idx}
           className="flex flex-1 gap-4 items-center justify-center xl:justify-start"

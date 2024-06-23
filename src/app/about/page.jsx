@@ -95,7 +95,7 @@ const AboutPage = () => {
   return (
     <>
       {/* <PageTransition /> */}
-      <div className="text-center space-y-12 lg:space-y-24">
+      <div className="text-center md:mt-10 pb-6 space-y-12 lg:space-y-24">
         <div className="space-y-4">
           <h1 className="text-primary text-3xl font-semibold uppercase">
             About Me

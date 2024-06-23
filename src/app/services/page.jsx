@@ -50,7 +50,7 @@ const ServicesPage = () => {
             <div key={idx} data-aos="fade-up"
             data-aos-offset="200"
             data-aos-duration="1200"
-            data-aos-easing="ease-in-out">
+            data-aos-easing="ease-in">
               <div
                 className="relative max-w-96 h-full mx-auto px-4 py-8 md:px-6 lg:p-8 border-2 border-gray-800 hover:border-primary transition-all duration-300"
                 

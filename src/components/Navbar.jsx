@@ -63,7 +63,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="w-full mx-auto sticky top-0 z-30 bg-dark px-6 py-4 lg:py-6 xl:px-0 font-semibold flex items-center justify-between">
+    <header className="w-full mx-auto sticky top-0 z-20 bg-dark px-6 py-4 lg:py-6 xl:px-0 font-semibold flex items-center justify-between">
       {/* logo  */}
       <Logo />
 

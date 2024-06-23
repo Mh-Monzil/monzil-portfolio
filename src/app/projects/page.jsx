@@ -10,6 +10,7 @@ import project6 from "../../../public/projects/projects-6.png";
 import Link from "next/link";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import { Tooltip } from "react-tooltip";
+import PageTransition from "@/components/PageTransition";
 
 const ProjectPage = () => {
   const projects = [
@@ -95,6 +96,8 @@ const ProjectPage = () => {
   ];
 
   return (
+    <>
+    <PageTransition />
     <div className="text-center space-y-5 md:space-y-8 md:mt-10 pb-6">
       <h1 className="text-primary text-3xl font-semibold uppercase">
         Projects
@@ -159,6 +162,7 @@ const ProjectPage = () => {
         })}
       </div>
     </div>
+    </>
   );
 };
 

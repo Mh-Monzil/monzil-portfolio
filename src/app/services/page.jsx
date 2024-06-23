@@ -5,6 +5,7 @@ import { SiHtmlacademy } from "react-icons/si";
 import { HiOutlineCodeBracket } from "react-icons/hi2";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import PageTransition from "@/components/PageTransition";
 
 const ServicesPage = () => {
   useEffect(() => {
@@ -35,6 +36,8 @@ const ServicesPage = () => {
   ];
 
   return (
+    <>
+    <PageTransition />
     <div className="text-center space-y-5 md:space-y-8 md:mt-20 pb-6">
       <h1 className="text-primary text-3xl font-semibold uppercase">My Service</h1>
       <p className="max-w-3xl mx-auto font-bold text-xl md:text-2xl">
@@ -65,6 +68,7 @@ const ServicesPage = () => {
         })}
       </div>
     </div>
+    </>
   );
 };
 

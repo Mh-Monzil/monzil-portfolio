@@ -45,7 +45,7 @@ export default function Home() {
             />
           </motion.div>
           <div className="md:w-1/2 space-y-4 text-center md:text-left">
-            <p className="text-xl lg:text-2xl h-12">
+            <p className="text-xl lg:text-2xl h-10">
               Junior
               <Typewriter
                 words={[

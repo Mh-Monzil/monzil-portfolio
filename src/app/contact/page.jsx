@@ -61,7 +61,7 @@ const ContactPage = () => {
               form below, and I&apos;ll respond promptly.
             </p>
             <form action="https://api.web3forms.com/submit" method="POST" className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input type="hidden" name="access_key" value="4b306a0b-32a7-4175-9b95-97515e400c0e"></input>
+            <input type="hidden" name="access_key" value={process.env.MY_ACCESS_KEY}></input>
               <input
                 type="text"
                 name="firstName"

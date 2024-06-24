@@ -67,29 +67,34 @@ const ContactPage = () => {
                 name="firstName"
                 placeholder="First name"
                 className="w-full rounded bg-transparent border p-3 focus:outline focus:outline-primary focus:border-dark"
+                required
               />
               <input
                 type="text"
                 name="lastName"
                 placeholder="Last name"
                 className="w-full rounded bg-transparent border p-3 focus:outline focus:outline-primary focus:border-dark"
+                required
               />
               <input
                 type="email"
                 name="email"
                 placeholder="Email address"
                 className="w-full rounded bg-transparent border p-3 focus:outline focus:outline-primary focus:border-dark"
+                required
               />
               <input
                 type="number"
                 name="number"
                 placeholder="Phone number"
                 className="w-full rounded bg-transparent border p-3 focus:outline focus:outline-primary focus:border-dark"
+                required
               />
               <textarea
               name="message"
                 placeholder="Type your message here..."
                 className="w-full rounded bg-transparent border p-3 focus:outline focus:outline-primary focus:border-dark md:col-span-2"
+                required
               ></textarea>
               <input type="hidden" name="redirect" value="https://web3forms.com/success"></input>
               <button type="submit" className="border-2 border-primary py-3 rounded text-white font-bold hover:bg-primary hover:text-black cursor-pointer transition-all ease-in-out duration-300 ">Send Message</button>

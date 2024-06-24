@@ -75,7 +75,7 @@ export default function Home() {
             <p className="font-medium text-lg max-w-[600px]">
               Transforming creative ideas into functional web experiences.
               Driven by a passion for coding and a commitment to continuous
-              learning.
+              learning. Specializing in frontend development with expertise in HTML, CSS, JavaScript, and React.
             </p>
             <div className="pt-4 flex justify-center md:justify-start gap-4">
               <span data-aos="fade-down"

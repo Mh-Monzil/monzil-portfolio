@@ -60,33 +60,40 @@ const ContactPage = () => {
               Reach out for collaborations, projects, or questions. Fill out the
               form below, and I&apos;ll respond promptly.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <form action="https://api.web3forms.com/submit" method="POST" className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input type="hidden" name="access_key" value="4b306a0b-32a7-4175-9b95-97515e400c0e"></input>
               <input
                 type="text"
+                name="firstName"
                 placeholder="First name"
                 className="w-full rounded bg-transparent border p-3 focus:outline focus:outline-primary focus:border-dark"
               />
               <input
                 type="text"
+                name="lastName"
                 placeholder="Last name"
                 className="w-full rounded bg-transparent border p-3 focus:outline focus:outline-primary focus:border-dark"
               />
               <input
                 type="email"
+                name="email"
                 placeholder="Email address"
                 className="w-full rounded bg-transparent border p-3 focus:outline focus:outline-primary focus:border-dark"
               />
               <input
                 type="number"
+                name="number"
                 placeholder="Phone number"
                 className="w-full rounded bg-transparent border p-3 focus:outline focus:outline-primary focus:border-dark"
               />
               <textarea
+              name="message"
                 placeholder="Type your message here..."
                 className="w-full rounded bg-transparent border p-3 focus:outline focus:outline-primary focus:border-dark md:col-span-2"
               ></textarea>
-              <input type="submit" value="Send Message" className="border-2 border-primary py-3 rounded text-white font-bold hover:bg-primary hover:text-black cursor-pointer transition-all ease-in-out duration-300 " />
-            </div>
+              <input type="hidden" name="redirect" value="https://web3forms.com/success"></input>
+              <button type="submit" className="border-2 border-primary py-3 rounded text-white font-bold hover:bg-primary hover:text-black cursor-pointer transition-all ease-in-out duration-300 ">Send Message</button>
+            </form>
           </div>
         </div>
       </div>

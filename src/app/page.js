@@ -83,7 +83,7 @@ export default function Home() {
                   data-aos-duration="1500"
                   data-aos-easing="ease-in-out">
               <Link
-                href="/resume.pdf"
+                href="/Frontend Developer Resume.pdf"
                 target="_blank"
                 download={true}
                 className="bg-transparent border-2 border-primary text-white text-lg font-semibold lg:font-bold p-2.5 lg:px-6 flex items-center gap-3 w-fit rounded-md hover:bg-primary hover:text-dark transition-all ease-in-out duration-300"

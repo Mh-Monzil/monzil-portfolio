@@ -17,7 +17,7 @@ const Home = () => {
     return (
         <>
       {/* <PageTransition /> */}
-      <main className="flex min-h-[80vh] flex-col items-center justify-center font-bold ">
+      <main className="flex flex-col items-center justify-center font-bold ">
         <div className=" flex flex-col items-center justify-center md:flex-row gap-8 lg:gap-20 w-full h-full pt-6 xl:pt-8 xl:pb-24">
           <motion.div
             initial={{ opacity: 0 }}
@@ -68,11 +68,11 @@ const Home = () => {
                 data-aos-offset="200"
                 data-aos-duration="1500"
                 data-aos-easing="ease-in-out"
-                href="/resume.pdf"
+                href="/Monzil Resume.pdf"
                 target="_blank"
                 className="bg-transparent border-2 border-primary text-white text-lg font-semibold lg:font-bold p-2.5 lg:px-6 flex items-center gap-3 w-fit rounded-md hover:bg-primary hover:text-dark transition-all ease-in-out duration-300"
               >
-                Resume <FiExternalLink className="text-3xl" />
+                Resume<FiExternalLink className="text-3xl" />
               </Link>
               <Link
                 data-aos="fade-left"

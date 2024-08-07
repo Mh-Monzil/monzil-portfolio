@@ -107,6 +107,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        {/* stats  */}
         <Stats />
       </main>
     </>

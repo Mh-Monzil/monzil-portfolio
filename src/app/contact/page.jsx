@@ -6,6 +6,31 @@ import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 
 const ContactPage = () => {
+  const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "4b306a0b-32a7-4175-9b95-97515e400c0e");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+
   const contacts = [
     {
       icon: <FaPhoneAlt />,
@@ -42,7 +67,9 @@ const ContactPage = () => {
                       {contact.icon}
                     </span>
                     <div>
-                      <span className="font-medium lg:text-lg">{contact.title}</span>
+                      <span className="font-medium lg:text-lg">
+                        {contact.title}
+                      </span>
                       <p className="font-semibold lg:text-lg">{contact.info}</p>
                     </div>
                   </div>
@@ -60,8 +87,10 @@ const ContactPage = () => {
               Reach out for collaborations, projects, or questions. Fill out the
               form below, and I&apos;ll respond promptly.
             </p>
-            <form action="https://api.web3forms.com/submit" method="POST" className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input type="hidden" name="access_key" value={process.env.MY_ACCESS_KEY}></input>
+            <form
+              onSubmit={onSubmit}
+              className="grid grid-cols-1 md:grid-cols-2 gap-4"
+            >
               <input
                 type="text"
                 name="firstName"
@@ -91,13 +120,22 @@ const ContactPage = () => {
                 required
               />
               <textarea
-              name="message"
+                name="message"
                 placeholder="Type your message here..."
                 className="w-full rounded bg-transparent border p-3 focus:outline focus:outline-primary focus:border-dark md:col-span-2"
                 required
               ></textarea>
-              <input type="hidden" name="redirect" value="https://web3forms.com/success"></input>
-              <button type="submit" className="border-2 border-primary py-3 rounded text-white font-bold hover:bg-primary hover:text-black cursor-pointer transition-all ease-in-out duration-300 ">Send Message</button>
+              <input
+                type="hidden"
+                name="redirect"
+                value="https://web3forms.com/success"
+              ></input>
+              <button
+                type="submit"
+                className="border-2 border-primary py-3 rounded text-white font-bold hover:bg-primary hover:text-black cursor-pointer transition-all ease-in-out duration-300 "
+              >
+                Send Message
+              </button>
             </form>
           </div>
         </div>

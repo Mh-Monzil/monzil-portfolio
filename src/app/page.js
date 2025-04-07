@@ -46,7 +46,6 @@ export default function Home() {
           </motion.div>
           <div className="md:w-1/2 space-y-4 text-center md:text-left">
             <p className="text-xl lg:text-2xl h-10">
-              Junior
               <Typewriter
                 words={[
                   " Frontend Developer",
@@ -79,24 +78,24 @@ export default function Home() {
             </p>
             <div className="pt-4 flex justify-center md:justify-start gap-4">
               <span data-aos="fade-down"
-                  data-aos-offset="200"
-                  data-aos-duration="1500"
-                  data-aos-easing="ease-in-out">
-              <Link
-                href="/Monzil Frontend Developer Resume.pdf"
-                target="_blank"
-                download={true}
-                className="bg-transparent border-2 border-primary text-white text-lg font-semibold lg:font-bold p-2.5 lg:px-6 flex items-center gap-3 w-fit rounded-md hover:bg-primary hover:text-dark transition-all ease-in-out duration-300"
-              >
-                Resume <FiExternalLink className="text-3xl" />
-              </Link>
+                data-aos-offset="200"
+                data-aos-duration="1500"
+                data-aos-easing="ease-in-out">
+                <Link
+                  href="https://drive.google.com/file/d/1N0oS08_rVAOeWo79NeiC5AsDDDYd6pRA/view?usp=sharing"
+                  target="_blank"
+                  // download={true}
+                  className="bg-transparent border-2 border-primary text-white text-lg font-semibold lg:font-bold p-2.5 lg:px-6 flex items-center gap-3 w-fit rounded-md hover:bg-primary hover:text-dark transition-all ease-in-out duration-300"
+                >
+                  Resume <FiExternalLink className="text-3xl" />
+                </Link>
               </span>
               <span data-aos="fade-down"
-                  data-aos-offset="200"
-                  data-aos-duration="1500"
-                  data-aos-easing="ease-in-out">
+                data-aos-offset="200"
+                data-aos-duration="1500"
+                data-aos-easing="ease-in-out">
                 <Link
-                  
+
                   href="/contact"
                   className="bg-primary border-2 border-primary text-dark text-lg font-semibold lg:font-bold p-2.5 lg:px-6 flex items-center gap-3 w-fit rounded-md hover:bg-transparent hover:text-white transition-all ease-in-out duration-300 "
                 >

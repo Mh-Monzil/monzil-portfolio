@@ -48,9 +48,9 @@ export default function Home() {
             <p className="text-xl lg:text-2xl h-10">
               <Typewriter
                 words={[
-                  " Frontend Developer",
-                  " MERN Stack Developer",
-                  " Web Developer",
+                  " Frontend Developer...",
+                  " MERN Stack Developer...",
+                  " Web Developer...",
                 ]}
                 loop={true}
                 cursor
